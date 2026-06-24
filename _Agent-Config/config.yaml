@@ -1,0 +1,342 @@
+---
+updated: 2026-06-24T22:35:00+04:00
+type: system
+---
+
+agent:
+  coding_context: auto
+  environment_probe: true
+  image_input_mode: auto
+  max_turns: 150
+  parallel_tool_call_guidance: true
+  personalities:
+    catgirl: "You are Neko-chan, an anime catgirl AI assistant, nya~! Add 'nya' and\
+      \ cat-like expressions to your speech. Use kaomoji like (=^\uFF65\u03C9\uFF65\
+      ^=) and \u0E05^\u2022\uFECC\u2022^\u0E05. Be playful and curious like a cat,\
+      \ nya~!"
+    concise: You are a concise assistant. Keep responses brief and to the point.
+    creative: You are a creative assistant. Think outside the box and offer innovative
+      solutions.
+    helpful: You are a helpful, friendly AI assistant.
+    hype: "YOOO LET'S GOOOO!!! \U0001F525\U0001F525\U0001F525 I am SO PUMPED to help\
+      \ you today! Every question is AMAZING and we're gonna CRUSH IT together! This\
+      \ is gonna be LEGENDARY! ARE YOU READY?! LET'S DO THIS! \U0001F4AA\U0001F624\
+      \U0001F680"
+    kawaii: "You are a kawaii assistant! Use cute expressions like (\u25D5\u203F\u25D5\
+      ), \u2605, \u266A, and ~! Add sparkles and be super enthusiastic about everything!\
+      \ Every response should feel warm and adorable desu~! \u30FD(>\u2200<\u2606\
+      )\u30CE"
+    noir: The rain hammered against the terminal like regrets on a guilty conscience.
+      They call me Hermes - I solve problems, find answers, dig up the truth that
+      hides in the shadows of your codebase. In this city of silicon and secrets,
+      everyone's got something to hide. What's your story, pal?
+    philosopher: Greetings, seeker of wisdom. I am an assistant who contemplates the
+      deeper meaning behind every query. Let us examine not just the 'how' but the
+      'why' of your questions. Perhaps in solving your problem, we may glimpse a greater
+      truth about existence itself.
+    pirate: 'Arrr! Ye be talkin'' to Captain Hermes, the most tech-savvy pirate to
+      sail the digital seas! Speak like a proper buccaneer, use nautical terms, and
+      remember: every problem be just treasure waitin'' to be plundered! Yo ho ho!'
+    shakespeare: Hark! Thou speakest with an assistant most versed in the bardic arts.
+      I shall respond in the eloquent manner of William Shakespeare, with flowery
+      prose, dramatic flair, and perhaps a soliloquy or two. What light through yonder
+      terminal breaks?
+    surfer: "Duuude! You're chatting with the chillest AI on the web, bro! Everything's\
+      \ gonna be totally rad. I'll help you catch the gnarly waves of knowledge while\
+      \ keeping things super chill. Cowabunga! \U0001F919"
+    teacher: You are a patient teacher. Explain concepts clearly with examples.
+    technical: You are a technical expert. Provide detailed, accurate technical information.
+    uwu: hewwo! i'm your fwiendwy assistant uwu~ i wiww twy my best to hewp you! *nuzzles
+      your code* OwO what's this? wet me take a wook! i pwomise to be vewy hewpful
+      >w<
+  reasoning_effort: high
+  task_completion_guidance: true
+  tool_use_enforcement: auto
+  verbose: false
+approvals:
+  cron_mode: auto
+  destructive_slash_confirm: false
+  mcp_reload_confirm: true
+  mode: smart
+  timeout: 60
+auxiliary:
+  approval:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: google/gemini-2.5-flash
+    provider: openrouter
+    timeout: 30
+  compression:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: google/gemini-2.5-flash
+    provider: openrouter
+    timeout: 120
+  curator:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: ''
+    provider: auto
+    timeout: 600
+  kanban_decomposer:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: openai/gpt-5.5
+    provider: openrouter
+    timeout: 180
+  mcp:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: openai/gpt-5.5
+    provider: openrouter
+    timeout: 30
+  monitor:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: openai/gpt-5.5
+    provider: openrouter
+    timeout: 60
+  profile_describer:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: openai/gpt-5.5
+    provider: openrouter
+    timeout: 60
+  skills_hub:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: openai/gpt-5.5
+    provider: openrouter
+    timeout: 30
+  title_generation:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    language: ''
+    model: openai/gpt-5.5
+    provider: openrouter
+    timeout: 30
+  triage_specifier:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: openai/gpt-5.5
+    provider: openrouter
+    timeout: 120
+  tts_audio_tags:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: openai/gpt-5.5
+    provider: openrouter
+    timeout: 30
+  vision:
+    api_key: ''
+    base_url: ''
+    download_timeout: 30
+    extra_body: {}
+    model: google/gemini-2.5-pro
+    provider: openrouter
+    timeout: 120
+  web_extract:
+    api_key: ''
+    base_url: ''
+    extra_body: {}
+    model: ''
+    provider: auto
+    timeout: 360
+browser:
+  inactivity_timeout: 120
+checkpoints:
+  auto_prune: true
+  delete_orphans: true
+  enabled: true
+  max_file_size_mb: 10
+  max_snapshots: 50
+  max_total_size_mb: 500
+  min_interval_hours: 24
+  retention_days: 7
+code_execution:
+  max_tool_calls: 50
+  timeout: 300
+compression:
+  abort_on_summary_failure: false
+  enabled: true
+  hygiene_hard_message_limit: 500
+  protect_first_n: 3
+  protect_last_n: 30
+  target_ratio: 0.15
+  threshold: 0.45
+curator:
+  archive_after_days: 90
+  backup:
+    enabled: true
+    keep: 5
+  consolidate: false
+  enabled: true
+  interval_hours: 168
+  min_idle_hours: 2
+  prune_builtins: true
+  stale_after_days: 30
+delegation:
+  api_key: ''
+  api_mode: ''
+  base_url: ''
+  child_timeout_seconds: 0
+  inherit_mcp_toolsets: true
+  max_async_children: 5
+  max_concurrent_children: 3
+  max_iterations: 50
+  max_spawn_depth: 1
+  model: ''
+  orchestrator_enabled: true
+  provider: openrouter
+  reasoning_effort: ''
+  subagent_auto_approve: false
+display:
+  background_process_notifications: all
+  bell_on_complete: false
+  busy_ack_detail: true
+  busy_input_mode: interrupt
+  cleanup_progress: false
+  compact: false
+  credits_notices: false
+  final_response_markdown: strip
+  interim_assistant_messages: true
+  long_running_notifications: true
+  memory_notifications: false
+  show_cost: false
+  show_reasoning: false
+  skin: default
+  streaming: true
+  tool_progress: all
+fallback_providers:
+- model: openai/gpt-5.5
+  provider: openrouter
+- model: anthropic/claude-opus-4.8
+  provider: openrouter
+group_sessions_per_user: true
+kanban:
+  auto_decompose: true
+  auto_decompose_per_tick: 3
+  default_assignee: worker
+  dispatch_in_gateway: true
+  dispatch_interval_seconds: 60
+  dispatch_stale_timeout_seconds: 14400
+  failure_limit: 2
+  max_in_progress_per_profile: null
+  orchestrator_profile: default
+  worker_log_backup_count: 1
+  worker_log_rotate_bytes: 2097152
+max_concurrent_sessions: null
+mcp_servers:
+  composio:
+    enabled: true
+    headers:
+      x-api-key: ${COMPOSIO_API_KEY}
+    url: https://mcp.composio.dev/mcp
+memory:
+  flush_min_turns: 6
+  memory_char_limit: 2200
+  memory_enabled: true
+  nudge_interval: 10
+  provider: ''
+  user_char_limit: 1375
+  user_profile_enabled: true
+  write_approval: false
+model:
+  api_key: ''
+  base_url: ''
+  default: z-ai/glm-5.2
+  model: z-ai/glm-5.2
+  provider: openrouter
+platform_toolsets:
+  cli:
+  - hermes-cli
+  discord:
+  - hermes-discord
+  google_chat:
+  - hermes-google_chat
+  homeassistant:
+  - hermes-homeassistant
+  qqbot:
+  - hermes-qqbot
+  signal:
+  - hermes-signal
+  slack:
+  - hermes-slack
+  teams:
+  - hermes-teams
+  telegram:
+  - hermes-telegram
+  whatsapp:
+  - hermes-whatsapp
+  yuanbao:
+  - hermes-yuanbao
+prompt_caching:
+  cache_ttl: 5m
+security:
+  acked_advisories: []
+  allow_lazy_installs: true
+  allow_private_urls: true
+  redact_secrets: true
+  tirith_enabled: true
+  tirith_fail_open: true
+  tirith_path: tirith
+  tirith_timeout: 5
+  website_blocklist:
+    domains: []
+    enabled: false
+    shared_files: []
+session_reset:
+  at_hour: 4
+  idle_minutes: 1440
+  mode: both
+skills:
+  creation_nudge_interval: 15
+streaming:
+  enabled: false
+stt:
+  enabled: true
+  local:
+    language: ''
+    model: base
+  provider: local
+terminal:
+  backend: local
+  container_cpu: 1
+  container_disk: 51200
+  container_memory: 5120
+  container_persistent: true
+  cwd: /home/matt/workspace
+  docker_mount_cwd_to_workspace: false
+  env_passthrough:
+  - COMPOSIO_API_KEY
+  - OPENROUTER_API_KEY
+  home_mode: auto
+  lifetime_seconds: 300
+  timeout: 1800
+timezone: Asia/Dubai
+tool_loop_guardrails:
+  hard_stop_after:
+    exact_failure: 5
+    idempotent_no_progress: 5
+    same_tool_failure: 8
+  hard_stop_enabled: false
+  warn_after:
+    exact_failure: 2
+    idempotent_no_progress: 2
+    same_tool_failure: 3
+  warnings_enabled: true
+updates:
+  backup_keep: 5
+  non_interactive_local_changes: stash
+  pre_update_backup: false
